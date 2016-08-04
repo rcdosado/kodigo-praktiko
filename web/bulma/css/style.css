@@ -5109,7 +5109,7 @@ a.nav-item.is-tab.is-active {
 
 .pagination li {
   margin: 0 2px;
-}
+margin: }
 
 .pagination ul {
   -webkit-box-align: center;
