@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax Test</title>
+		<link charset="utf-8" href="css/bold.css" media="screen" rel="stylesheet" title="flexgrid">
+     <link charset="utf-8" href="css/flexboxgrid.min.css" media="screen" rel="stylesheet" title="flexgrid">
+	<link charset="utf-8" href="css/normalize.css" media="screen" rel="stylesheet" title="flexgrid">
+
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script>
+	(function() {
+	  var githubAPI = "https://api.github.com/users/rcdosado/followers";
+	  $.getJSON( githubAPI,function(result){
+		var items=[];
+		$.each(result, function(i, field){
+			$('#greatwall').append('<div class="box">'+field.login+'</div>');
+		});
+	  });
+	})();
+	</script>
+
+</head>
+
+<body class="layout">
+	<div class="page js-page">
+		<header class="hero">
+		<div class="row center-xs">
+			<h1 class="hero-headline">Following</h1>	
+		</div>	
+
+		</header>
+		<div class="wrap container-fluid">
+			<section class="page-section">
+				<div class="box box-container">
+					<div class="row">
+						<div id="greatwall" class="col-xs">
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
