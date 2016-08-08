@@ -1,96 +1,182 @@
-   html{  }
-        body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
-        *{ box-sizing: border-box; }
-        *::after,*::before{ box-sizing: border-box; }
-        h1{ font-size: 2rem; }
-        h2{ font-size: 1.4rem; color: steelblue; }
-        h3{ font-size: 1.1rem; }
-        p { font-size: 0.9rem; }
-        ul{ padding:0; list-style-position: inside; }
-        li{ font-size: 0.9rem; margin: 0; }
+html{  }
+body{ margin: 0; font: 400 100%/1.4 'Open Sans',sans-serif; color: #555; }
+*{ box-sizing: border-box; }
+*::after,*::before{ box-sizing: border-box; }
+h1{ font-size: 2rem; }
+h2{ font-size: 1.4rem; color: steelblue; }
+h3{ font-size: 1.1rem; }
+p { font-size: 0.9rem; }
+ul{ padding:0; list-style-position: inside; }
+li{ font-size: 0.9rem; margin: 0; }
 
-		.example-lang {
-			max-width: 80em;
-			margin: 0 auto;
-			padding: 0 1em;
-		}
-        .thecard {
-            box-shadow: 0 1px 30px rgba(0,0,0,.4);
-            background-color: #fff;
-            border-radius: 4px;
-            transition: 400ms ease;
-            text-align: left;
-        }
-        .thecard:hover{
-            box-shadow: 0 10px 50px rgba(0,0,0,.6);
-        }
-        .thecard:hover .card-outmore {
-            background: #2C3E50;
-            color: #fff;
-        }
-        .thecard a{
-            color: currentColor;
-            text-decoration: none;
-        }
-        .card-img {
-            display: block;
-            max-height: 395px;
-            overflow: hidden;
-        }
-        .card-img img {
-            display: block;
-            width:100%;
-            border-radius: 4px 4px 0 0;
-        }
 
-        .card-caption {
-            position: relative;
-            padding: 5px 25px;
-        }
-        .card-caption h1 {
-            line-height: 1;
-        }
+.thecard {
+	box-shadow: 0 1px 30px rgba(0,0,0,.4);
+	background-color: #fff;
+	border-radius: 4px;
+	transition: 400ms ease;
+	text-align: left;
+}
+.thecard:hover{
+	box-shadow: 0 10px 50px rgba(0,0,0,.6);
+}
+.thecard:hover .card-outmore {
+	background: #2C3E50;
+	color: #fff;
+}
+.thecard a{
+	color: currentColor;
+	text-decoration: none;
+}
+.card-title {
+	display: block;
+	max-height: 395px;
+	overflow: hidden;
+	text-align:left;
+	padding-left:25px;
+}
+.card-img {
+	display: block;
+	max-height: 395px;
+	overflow: hidden;
+}
+.card-img img {
+	display: block;
+	width:100%;
+	border-radius: 4px 4px 0 0;
+}
 
-        .card-outmore {
-            padding: 10px 25px;
-            border-radius: 0 0 4px 4px;
-            border-top: 1px solid #e0e0e0;
-            background: #efefef;
-            color: #222;
-            display: flex;
-            transition: 400ms ease;
-        }
-        .card-outmore h5 {
-            flex: 1;
-        }
-        .card-outmore i {
-            border:1px solid ;
-            padding: 1px 6px;
-            border-radius: 50%;
-        }
+.card-caption {
+	position: relative;
+	padding: 5px 25px;
+}
+.card-caption h1 {
+	line-height: 1;
+}
 
-        span.date { font-size: 10px; }
+.card-outmore {
+	padding: 10px 25px;
+	border-radius: 0 0 4px 4px;
+	border-top: 1px solid #e0e0e0;
+	background: #efefef;
+	color: #222;
+	display: flex;
+	transition: 400ms ease;
+}
+.card-outmore h5 {
+	flex: 1;
+}
+.card-outmore i {
+	border:1px solid ;
+	padding: 1px 6px;
+	border-radius: 50%;
+}
 
-        h5 { margin:0; }
+span.date { font-size: 10px; }
 
-        .thecard .like-btn {
-            font-size: 18px;
-            background: #446CB3;
-            color: #fff;
-            padding: 13px 15px;
-            border-radius: 50em;
-            position: absolute;
-            right: 20px;
-            top: 10px;
-            box-shadow: 0 2px 1px rgba(0,0,0,.2);
-            transition: 400ms ease;
-        }
-        .card-img + .card-caption > .like-btn{
-            top: -22px;
+h5 { margin:0; }
 
-        }
+.thecard .like-btn {
+	font-size: 18px;
+	background: #446CB3;
+	color: #fff;
+	padding: 13px 15px;
+	border-radius: 50em;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	box-shadow: 0 2px 1px rgba(0,0,0,.2);
+	transition: 400ms ease;
+}
+.card-img + .card-caption > .like-btn{
+	top: -22px;
 
-        .thecard .like-btn:hover {
-            background: #3B5998;
-            box-shadow: 0 4px 5px rgba(0,0,0,.3);
-        }
+}
+
+.thecard .like-btn:hover {
+	background: #3B5998;
+	box-shadow: 0 4px 5px rgba(0,0,0,.3);
+}
+
+
+
+.example-lang {
+    max - width: 80e m;
+    margin: 0 auto;
+    padding: 0 1e m
+}.example-lang h1 {
+    font - size: 2 rem;
+    margin - bottom: 1e m;
+    text - align: center
+}.example-lang h2 {
+    margin - top: 3e m
+}.example-lang a {
+    color: #4682b4}.header{background:# 4682 b4;position: relative;margin - bottom: 50 px;color: #fff;padding: 4e m 0 1e m;text - align: center
+}.header a {
+    color: inherit;text - decoration: none
+}.header: before {
+    background: inherit;content: '';display: block;height: 50 % ;left: 0;position: absolute;right: 0;z - index: -1;bottom: 0; - webkit - transform: skewY(4 deg);transform: skewY(4 deg); - webkit - transform - origin: 0;transform - origin: 0
+}.header h1 {
+    -webkit - align - items: center; - ms - flex - align: center;
+    align - items: center;
+    font - size: 3 rem;
+    border - bottom: 10 px solid# fff;
+    border - top: 10 px solid# fff;
+    border - radius: 18 px;
+    padding: .8 rem 2.6 rem;
+    text - transform: uppercase;
+    margin - bottom: .3e m
+}.header h1, .header h1: before {
+    display: -webkit - inline - flex;display: -ms - inline - flexbox;display: inline - flex
+}.header h1: before {
+    content: '';position: relative;vertical - align: middle;margin - right: 5 px;height: 40 px;width: 42 px;border: 1 px solid #4682b4;background-color:# fff;background - image: linear - gradient(0 deg, #4682b4 2px,transparent 0),linear-gradient(270deg,# 4682 b4 2 px, transparent 0),
+    linear - gradient(270 deg, #4682b4 2px,transparent 0);background-size:100% 50%,50% 50%,100%,100%;background-position:0 0,0 100%,0 0;background-repeat:repeat-y,repeat-x}.header p{color:hsla(0,0%,100%,.7);margin:0 auto}.github-button iframe{margin:0 .5rem .5rem}section{position:relative;margin:2em 0 4em}section:before{content:'';display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;border:1px solid # 4682 b4; width: 100 % ; - webkit - align - items: stretch; - ms - flex - align: stretch; align - items: stretch; position: absolute; bottom: 20 px
+    }
+    section: after {
+        content: '';position: relative;display: block;margin: 5 rem auto;height: 40 px;width: 42 px;border: 7 px solid# fff;border - left - width: 9 px;background - color: #4682b4;background-image:linear-gradient(0deg,# fff 2 px,
+        transparent 0),
+    linear - gradient(270 deg, #fff 2 px, transparent 0),
+    linear - gradient(270 deg, #fff 2 px, transparent 0);background - size: 100 % 50 % ,
+    50 % 50 % ,
+    100 % ,
+    100 % ;background - position: 0 0,
+    0 100 % ,
+    0 0;background - repeat: repeat - y,
+    repeat - x
+}
+table {
+    width: 100 % ;border - collapse: collapse
+}
+table td, table th {
+    border: 1 px solid hsla(31, 15 % , 50 % , .5);padding: .5e m
+}.bs - callout, pre {
+    padding: 1.25e m;margin: 1.6e m 0;background: #fcfcfc;border: 1 px solid# e6e6e6;border - left - width: 5 px;border - radius: 3 px
+}.bs - callout {
+    max - width: 100 % ;
+    overflow - x: auto;
+    border - color: #2ecc71}pre{overflow-x:auto;font-size:.875em;white-space:pre;word-wrap:normal}pre.doc{border-color:# 2e cc71
+}.demo {
+    width: 100 % ;background: hsla(31, 15 % , 50 % , .2);text - align: center
+}.demo p {
+    margin: 0;padding: 1 rem
+}@
+media screen and(max - width: 35.5e m) {.demo p {
+        padding: .5 rem
+    }
+}.demo - explain {
+    margin: 0;padding: 0
+}.demo img {
+    display: block;max - width: 100 % ;height: auto
+}.withBorder {
+    border: 1 px solid hsla(31, 15 % , 50 % , .5)
+}.withBorder.col, .withBorder[class *= col - ] {
+    padding: 0
+}.withBorder.demo {
+    border: 1 px solid hsla(31, 15 % , 50 % , .5)
+}
+section: not(: first - of - type)[class *= col - ], section: not(: first - of - type)[class *= grid - ] {
+    position: relative;cursor: help
+}
+section: not(: first - of - type)[class *= col - ]: hover: after, section: not(: first - of - type)[class *= grid - ]: hover: after {
+    content: attr(class);padding: 2 px 8 px;position: absolute;left: .5 rem;top: 0;white - space: nowrap;z - index: 20;background - color: #555;color:# fff;font - size: .8 rem
+}

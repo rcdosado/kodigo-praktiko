@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GridLex Demo</title>
+
+    <link charset="utf-8" href="css/normalize.css" media="screen" rel="stylesheet" title="gridlex">
+    <link charset="utf-8" href="css/gridlex.min.css" media="screen" rel="stylesheet" title="gridlex">
+    <link charset="utf-8" href="css/style.css" media="screen" rel="stylesheet" title="gridlex">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+		(function() {
+			var githubAPI = "https://api.github.com/users/rcdosado/followers";
+			$.getJSON(githubAPI, function(result) {
+				var items = [];
+				$.each(result, function(i, field) {
+					$('.test').append('<h1>' + field.login + '</h1>');
+
+				});
+			});
+		})();
+    </script>
+</head>
+<body>
+	<header class="header">
+		<div>
+			<h1>My Github Followers </h1>
+		</div>
+	</header>
+	<div class="example-lang grid">
+		<div class="col-6_md-6">
+			<div class="thecard">
+				<a class="card-title " href="#_">
+					<h1>SuperProxy</h1>
+				</a>
+				<div class="card-caption">
+					<a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+					<a href="#_">
+						<span class="date">Thursday, July 16, 2015</span>
+						<h4>The nice sample title of this card.</h4>
+						<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+					</a>
+				</div>
+				<a class="card-outmore" href="#_">
+					<h5>Read more</h5>
+					<i class="outmore-icon fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<div class="col-6_md-6">
+			<div class="thecard">
+				<a class="card-title " href="#_">
+					<h1>SuperProxy</h1>
+				</a>
+				<div class="card-caption">
+					<a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+					<a href="#_">
+						<span class="date">Thursday, July 16, 2015</span>
+						<h4>The nice sample title of this card.</h4>
+						<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+					</a>
+				</div>
+				<a class="card-outmore" href="#_">
+					<h5>Read more</h5>
+					<i class="outmore-icon fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<div class="col-6_md-6">
+			<div class="thecard">
+				<a class="card-title " href="#_">
+					<h1>SuperProxy</h1>
+				</a>
+				<div class="card-caption">
+					<a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+					<a href="#_">
+						<span class="date">Thursday, July 16, 2015</span>
+						<h4>The nice sample title of this card.</h4>
+						<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+					</a>
+				</div>
+				<a class="card-outmore" href="#_">
+					<h5>Read more</h5>
+					<i class="outmore-icon fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<div class="col-6_md-6">
+			<div class="thecard">
+				<a class="card-title " href="#_">
+					<h1>SuperProxy</h1>
+				</a>
+				<div class="card-caption">
+					<a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+					<a href="#_">
+						<span class="date">Thursday, July 16, 2015</span>
+						<h4>The nice sample title of this card.</h4>
+						<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+					</a>
+				</div>
+				<a class="card-outmore" href="#_">
+					<h5>Read more</h5>
+					<i class="outmore-icon fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+	</div> <!-- example-lang -->
+
+	
+</body>
+</html>
