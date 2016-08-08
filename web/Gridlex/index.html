@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GridLex Demo</title>
+
+    <link charset="utf-8" href="css/normalize.css" media="screen" rel="stylesheet" title="gridlex">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link charset="utf-8" href="css/style.css" media="screen" rel="stylesheet" title="gridlex">
+    <link charset="utf-8" href="css/gridlex.min.css" media="screen" rel="stylesheet" title="flexgrid">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+    (function() {
+        var githubAPI = "https://api.github.com/users/rcdosado/followers";
+        $.getJSON(githubAPI, function(result) {
+            var items = [];
+            $.each(result, function(i, field) {
+                $('#follower').append('<div class="box">' + field.login + '</div>');
+            });
+        });
+    })();
+    </script>
+</head>
+<body>
+	<header class="header">
+		<div>
+			<h1>GridLex</h1>
+			<p>My Github Followers </p>
+		</div>
+	</header>
+	<div class="example">
+		<div class="col-4_sm-12">
+			<div class="thecard">
+				<a href="#" class="card-img">
+					<img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?fit=crop&fm=jpg&h=375&w=500" alt="">
+				</a>
+				<div class="card-caption">
+					<a href="#"></a>
+					<a href="#">
+						<span class="date">
+						</span>
+						<h1>The Title of the Card</h1>
+						<p>Some description</p>
+					</a>
+				</div>
+				<a class="card-outmore" href="#_">
+					<h5>Read more</h5>
+					<i class="outmore-icon fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+
+		  <div class="col-4_sm-12">
+				<div class="thecard">
+					<a class="card-img" href="#_">
+						<img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?fit=crop&fm=jpg&h=375&w=500">
+					</a>
+					<div class="card-caption">
+						<a href="#like" class="like-btn fa fa-thumbs-o-up"></a>
+						<a href="#_">
+							<span class="date">Thursday, July 16, 2015</span>
+							<h1>The nice sample title of this card.</h1>
+							<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam.</p>
+						</a>
+					</div>
+					<a class="card-outmore" href="#_">
+						<h5>Read more</h5>
+						<i class="outmore-icon fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+	</div>
+
+	
+</body>
+</html>
