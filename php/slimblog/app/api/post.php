@@ -19,7 +19,7 @@ $app->get('/api/posts', function(Request $request, Response $response){
 		$posts = $stmt->fetchAll(PDO::FETCH_OBJ);
 		$db = null; 
 		echo json_encode($posts);
-	}catch(PDOEception $e){
+	}catch(PDOException $e){
 		echo '{"error":{"text":'.$e->getMessage().'}}';
 	}
 });
@@ -39,7 +39,7 @@ $app->get('/api/post/{id}', function(Request $request, Response $response){
 		$post = $stmt->fetchAll(PDO::FETCH_OBJ);
 		$db = null; 
 		echo json_encode($post);
-	}catch(PDOEception $e){
+	}catch(PDOException $e){
 		echo '{"error":{"text":'.$e->getMessage().'}}';
 		
 	}
@@ -71,13 +71,13 @@ $app->post('/api/post/add',function(Request $request, Response $response){
 		echo '{"notice":{"text":"Post Added"}}';
 		
 		
-	}catch(PDOEception $e){
+	}catch(PDOException $e){
 		echo '{"error":{"text":'.$e->getMessage().'}}';
 		
 	}	
 });
 // Update Post 
-$app->post('/api/post/update/{id}',function(Request $request, Response $response){
+$app->put('/api/post/update/{id}',function(Request $request, Response $response){
 	$id = $request->getAttribute('id');
 	
 	$title = $request->getParam('title');
@@ -107,7 +107,32 @@ $app->post('/api/post/update/{id}',function(Request $request, Response $response
 		echo '{"notice":{"text":"Post #'.$id.' Updated"}}';
 		
 		
-	}catch(PDOEception $e){
+	}catch(PDOException $e){
+		echo '{"error":{"text":'.$e->getMessage().'}}';
+		
+	}	
+});
+
+// delete Post 
+$app->delete('/api/post/delete/{id}',function(Request $request, Response $response){
+	$id = $request->getAttribute('id');
+	
+	
+	$sql = "DELETE FROM posts WHERE id = $id";
+	
+	try{
+		// Get Database Object
+		$db = new db();
+		// Connect
+		$db = $db->connect();
+		$stmt = $db->prepare($sql);
+
+		$stmt->execute();
+		$db = null; 
+
+		echo '{"notice":{"text":"Post #'.$id.' Deleted"}}';
+		
+	}catch(PDOException $e){
 		echo '{"error":{"text":'.$e->getMessage().'}}';
 		
 	}	
