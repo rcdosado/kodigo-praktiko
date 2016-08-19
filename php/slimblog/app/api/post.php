@@ -2,9 +2,27 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+
 require '../vendor/autoload.php';
 
 $app = new \Slim\App;
+
+// Add basic Authentication
+
+$app->add(new \Slim\Middleware\HttpBasicAuthentication([
+	"path" => "/api/posts", 
+	"realm" => "Protected",  	
+	"users" => [
+		"root" => "t00r", 
+		"user" => "passw0rd"
+	], 
+	"callback" => function($request, $response, $arguments){
+		print_r($arguments);
+	}
+
+]));
+
+
 
 // Get All Posts
 $app->get('/api/posts', function(Request $request, Response $response){
