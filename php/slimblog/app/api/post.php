@@ -9,19 +9,19 @@ $app = new \Slim\App;
 
 // Add basic Authentication
 
-$app->add(new \Slim\Middleware\HttpBasicAuthentication([
-	"path" => "/api/post", 
-	"realm" => "Protected", 
-	"users" => [
-		"root" => "t00r",
-		"user" => "foo"
-	],
-    "authenticator" => function ($arguments) {
-    		$foo = (bool)rand(0,1);
-			return $foo;
-    }
+// $app->add(new \Slim\Middleware\HttpBasicAuthentication([
+// 	"path" => "/api/post", 
+// 	"realm" => "Protected", 
+// 	"users" => [
+// 		"root" => "t00r",
+// 		"user" => "foo"
+// 	],
+//     "authenticator" => function ($arguments) {
+//     		$foo = (bool)rand(0,1);
+// 			return $foo;
+//     }
 
-]));
+// ]));
 
 
 // Get All Posts
