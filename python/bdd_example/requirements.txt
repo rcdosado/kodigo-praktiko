@@ -1,0 +1,13 @@
+behave==1.2.5
+behave-django==0.4.0
+Django==1.10
+enum34==1.1.6
+factory-boy==2.7.0
+fake-factory==0.6.0
+ipaddress==1.0.16
+parse==1.6.6
+parse-type==0.3.4
+python-dateutil==2.5.3
+selenium==2.53.6
+six==1.10.0
+wheel==0.26.0
